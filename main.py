@@ -41,6 +41,10 @@ compression_progress = {}
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+@app.get("/robots.txt")
+async def robots():
+    return FileResponse("static/robots.txt", media_type="text/plain")
+
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
     with open("static/index.html") as f:
