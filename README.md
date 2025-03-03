@@ -34,11 +34,11 @@ A FastAPI-based web application for optimizing images and videos with a simple d
    ```
 
 3. Access the application:
-   Open your browser and navigate to `http://your-server-ip:8000`
+   Open your browser and navigate to `http://your-server-ip:8100`
 
 ### Configuration
 
-- The application runs on port 8000 by default
+- The application runs on port 8100 by default
 - Adjust `MAX_WORKERS` in docker-compose.yml based on your server's CPU cores
 - Processed files are automatically cleaned up after 1 hour
 
@@ -147,7 +147,7 @@ uvicorn main:app --reload
 
 2. Open your browser and navigate to:
 ```
-http://localhost:8000
+http://localhost:8100
 ```
 
 ## Usage
