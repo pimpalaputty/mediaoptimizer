@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./compressed:/app/compressed
+      - ./zips:/app/zips
+    restart: unless-stopped
+    environment:
+      - MAX_WORKERS=4  # Adjust based on your server's CPU cores 
