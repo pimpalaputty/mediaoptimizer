@@ -7,3 +7,4 @@ venv/
 uploads/*
 compressed/*
 zips/*
+app.log
